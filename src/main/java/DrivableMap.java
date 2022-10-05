@@ -28,6 +28,14 @@ class DrivableMap {
      *       Return true if the Drivable was added to drivable_map.
      */
 
+    public boolean addDrivable (String ID, Drivable object) {
+        if (!drivable_map.containsKey(ID)) {
+            drivable_map.put(ID, object);
+            return true;
+        }
+        return false;
+    }
+
 
 
 
@@ -38,6 +46,15 @@ class DrivableMap {
      * iterate through drivable_map.
      */
 
+    public boolean hasFasterThan(int speed) {
+        for (String item : drivable_map.keySet()) {
+            if (drivable_map.get(item).getMaxSpeed() >= speed) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
 
 
@@ -46,6 +63,16 @@ class DrivableMap {
      *       returns a List containing all of the Tradable items in
      *       drivable_map.
      */
+
+    public List<Tradable> getTradable() {
+        List<Tradable> tradable = new ArrayList<>();
+        for (String item : drivable_map.keySet()) {
+            if (drivable_map.get(item) instanceof Tradable) {
+                tradable.add(drivable_map.get(item));
+            }
+        }
+        return tradable;
+    }
 
 
 

@@ -32,8 +32,8 @@ class DomesticatableTrader extends Trader<Domesticatable> {
     }
 
     @Override
-    public int getSellingPrice(Domesticatable item) {
-        int super_price = super.getSellingPrice(item);
+    public double getSellingPrice(Domesticatable item) {
+        double super_price = super.getSellingPrice(item);
 
         if (super_price == Tradable.MISSING_PRICE) {
             return super_price;
