@@ -29,6 +29,10 @@ public class DrivableTrader<T> extends Trader{
 
     }
 
+    public DrivableTrader(int money) {
+        super(money);
+    }
+
 
     //@Override
     public double getSellingPrice(Drivable object) {
