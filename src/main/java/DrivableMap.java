@@ -65,10 +65,10 @@ class DrivableMap {
      */
 
     public List<Tradable> getTradable() {
-        List<Tradable> tradable = new ArrayList<>();
+        List<Tradable> tradable = new ArrayList<Tradable>();
         for (String item : drivable_map.keySet()) {
             if (drivable_map.get(item) instanceof Tradable) {
-                tradable.add(drivable_map.get(item));
+                tradable.add((Tradable)drivable_map.get(item));
             }
         }
         return tradable;

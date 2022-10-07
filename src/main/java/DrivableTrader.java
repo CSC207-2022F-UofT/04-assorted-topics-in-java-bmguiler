@@ -29,6 +29,7 @@ public class DrivableTrader<T> extends Trader{
 
     }
 
+
     //@Override
     public double getSellingPrice(Drivable object) {
         if (object instanceof Tradable) {
